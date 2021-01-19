@@ -1,0 +1,17 @@
+<div class="display-4 ml-4 text-white mt-4" *ngIf="tickets.length == 0 && isAdmin()">THERE ARE NO BOOKINGS.</div>
+<div class="display-4 ml-4 text-white mt-4" *ngIf="tickets.length == 0 && isUser()">YOU HAVE NO BOOKINGS.</div>
+<div class="pt-2 px-4 d-flex flex-col m-0 flex-wrap text-white mt-4">
+    <div class="media py-4 col-sm-6" *ngFor="let t of tickets;let index = index" [id]="t.imageUrl">
+        <img src="{{t.imageUrl}}" class="align-self-center img-thumbnail img-fluid mr-3" style="width: 30%;">
+        <div class="media-body">
+          <h5>TicketId: {{t.ticketId}}</h5>
+          <h6>Movie Title: {{t.movieTitle}}</h6>
+          <h6>Seat Booked: {{t.seatId}}</h6>
+          <h6>Theater Name: {{t.theaterName}}</h6>
+          <button class="btn btn-info mt-3 p-1" (click)="cancelTicket(t.ticketId,index)">Cancel Booking</button>
+          <button class="btn btn-primary p-1 ml-2 mt-3" [printSectionId]="t.imageUrl" ngxPrint>Print Ticket</button>
+        </div>
+    </div>
+</div>
+
+

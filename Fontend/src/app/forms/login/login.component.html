@@ -1,0 +1,63 @@
+<div class="display-4 pl-4 text-white" *ngIf="!loginType; else login">REGISTER</div>
+<ng-template #login>
+  <div class="display-4 pl-4 text-white" #login>LOGIN</div>
+</ng-template>
+
+<form
+  class="pl-4 pt-2 col-sm-4 text-white"
+  [formGroup]="formGroup"
+  (ngSubmit)="submitCredentials()"
+>
+  <div class="form-group">
+    <label for="email">Email</label>
+    <input type="email" class="form-control" formControlName="email" />
+    <div class="text-danger">
+      <div *ngIf="checkValid('email')">
+        Email is required
+      </div>
+      <div *ngIf="email.hasError('email')">Invalid Email</div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="password">Password</label>
+    <input type="password" class="form-control" formControlName="password" />
+    <!-- ((formGroup.touched || password.touched) && password.errors)||  -->
+    <div
+      *ngIf="checkValid('password')"
+      class="when-invalid"
+    >
+      Password is required
+    </div>
+  </div>
+
+  <div class="form-group" *ngIf="!loginType">
+    <label for="confirmpassword">Confirm Password</label>
+    <input
+      type="password"
+      class="form-control"
+      formControlName="confirmPassword"
+    />
+    <div
+      *ngIf="
+        checkValid('confirmPassword') && checkValid('password')
+      "
+      class="when-invalid"
+    >
+      Please Confirm Password
+    </div>
+    <div
+      *ngIf="!loginType && formGroup.hasError('notSame')"
+      class="when-invalid"
+    >
+      Passwords do not match
+    </div>
+  </div>
+
+  <button type="submit" class="btn btn-primary" *ngIf="!loginType">
+    Register
+  </button>
+  <button type="submit" class="btn btn-primary" *ngIf="loginType">Login</button>
+</form>
+
+

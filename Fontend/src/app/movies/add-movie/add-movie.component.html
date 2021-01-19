@@ -1,0 +1,82 @@
+<div class="display-4 pl-4 text-white pt-3">Add Movie</div>
+<form
+  class="pl-4 pt-2 text-white row"
+  [formGroup]="formGroup"
+  (ngSubmit)="AddMovie()"
+>
+  <div class="form-group col-sm-5">
+    <label for="Title">Movie Title</label>
+    <input type="text" class="form-control" formControlName="title" />
+    <div class="text-danger">
+      <div *ngIf="checkInvalid('title')">
+        Field is required
+      </div>
+    </div>
+  </div>
+  <div class="form-group col-sm-5">
+    <label for="">Image Url</label>
+    <input type="text" class="form-control" formControlName="imageurl" />
+    <div class="text-danger">
+      <div *ngIf="checkInvalid('imageurl')">
+        Field is required
+      </div>
+    </div>
+  </div>
+  <div class="form-group col-sm-5">
+    <label for="Price">Price</label>
+    <input type="text" class="form-control" formControlName="price" />
+    <div class="text-danger">
+      <div *ngIf="checkInvalid('price')">
+        Field is required
+      </div>
+    </div>
+  </div>
+  <div class="form-group col-sm-5">
+    <label for="Desc">Description</label>
+    <input type="text" class="form-control" formControlName="desc" />
+    <div class="text-danger">
+      <div *ngIf="checkInvalid('desc')">
+        Field is required
+      </div>
+    </div>
+  </div>
+  <div class="form-group col-sm-5">
+    <label for="fromTime">From Time</label>
+    <input type="datetime-local" class="form-control" step="1" formControlName="fromtime" />
+    <div class="text-danger">
+      <div *ngIf="checkInvalid('fromtime')">
+        Field is required
+      </div>
+    </div>
+  </div>
+  <div class="form-group col-sm-5">
+    <label for="toTime">To Time</label>
+    <input type="datetime-local" class="form-control" step="1" formControlName="totime" />
+    <div class="text-danger">
+      <div *ngIf="checkInvalid('totime')">
+        Field is required
+      </div>
+    </div>
+  </div>  
+  <div class="form-group col-sm-5">
+    <label for="toTime">Rating</label>
+    <input type="number" class="form-control" formControlName="rating" min="0" max="5"/>
+    <div class="text-danger">
+      <div *ngIf="checkInvalid('rating')">
+        Field is required
+      </div>
+    </div>
+  </div>
+  <div class="form-group col-sm-5">
+    <label for="">Language</label>
+    <input type="text" class="form-control" formControlName="language" />
+    <div class="text-danger">
+      <div *ngIf="checkInvalid('language')">
+        Field is required
+      </div>
+    </div>
+  </div>
+  <div class="offset-9">
+    <button type="submit" class="btn btn-outline-warning">Add Movie</button>
+  </div>
+</form>

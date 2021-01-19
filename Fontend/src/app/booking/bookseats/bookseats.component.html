@@ -1,0 +1,54 @@
+<div class="px-3 d-flex flex-wrap container-fluid bg-dark text-white mt-4">
+  <div class="mt-4">
+    <img src="{{ movie.imageUrl }}" alt="{{ movie.title }}" class="img-fluidimg-thumbnail ml-4" style="max-width: 300px;
+    -webkit-box-shadow: -2px 1px 11px 8px #FAEBFF; 
+      box-shadow: -2px 1px 11px 8px #FAEBFF;" />
+  </div>
+  <form [formGroup]="formGroup" class="pl-4 flex-grow" style="max-width: 900px">
+
+    <div class="display-3 my-4">{{ movie.title }}</div>
+
+    <div class="form-group">
+      <select name="selectTheatre" id="" class="form-control bg-dark text-white" aria-valuetext="select"
+        style="max-width: 350px; min-width: 300px" (ngModelChange)="navigate(content)" formControlName="select">
+        <option value="none" disabled>SELECT THEATRE</option>
+        <option [value]="theatre.id" *ngFor="let theatre of theatres">
+          {{ theatre.theatreName }}
+        </option>
+      </select>
+    </div>
+    <h4 class="mb-4">Price: {{ movie.price | currency: "₹" }}</h4>
+  </form>
+</div>
+
+<ng-template #content let-modal style="width: 400px; position: absolute !important; top: 0; left: 0;">
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">SEATS</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click'); ">
+      <span aria-hidden="true" class="text-white">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <div class="py-4">
+      <div class="d-flex flex-wrap m-0 p-0" style="max-width: 400px">
+        <div style="
+        display: grid;
+        width: 40px;
+        height: 40px;
+        place-items: center;
+        border-radius: 50%;
+        color: white;
+        background-color: dodgerblue;
+      " class="mr-2 free my-2" [ngClass]="{ occupied: seat.occupied,seat:!seat.occupied,booked:seat.booked }"
+          *ngFor="let seat of seats;let index = index"
+          (click)="bookSeat(seat)">
+          {{ seat.Id }}
+        </div>
+      </div>
+    </div>
+    <div class="modal-footer d-flex">
+      <h4>Total Price:{{seatsBooking.length * movie.price | currency:"₹"}}</h4>
+      <button class="btn btn-danger ml-auto" (click)="bookSeats()">Book Tickets</button>
+    </div>
+  </div>
+</ng-template>
