@@ -131,8 +131,6 @@ namespace backend
 
             app.UseStaticFiles();
 
-            app.UseStaticFiles();
-
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
