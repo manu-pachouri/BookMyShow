@@ -1,0 +1,8 @@
+C:\Users\user\Documents\GitHub\BookMyShow\BookMyShow.Models\obj\Debug\netcoreapp3.1\BookMyShow.Models.AssemblyInfoInputs.cache
+C:\Users\user\Documents\GitHub\BookMyShow\BookMyShow.Models\obj\Debug\netcoreapp3.1\BookMyShow.Models.AssemblyInfo.cs
+C:\Users\user\Documents\GitHub\BookMyShow\BookMyShow.Models\obj\Debug\netcoreapp3.1\BookMyShow.Models.csproj.CoreCompileInputs.cache
+C:\Users\user\Documents\GitHub\BookMyShow\BookMyShow.Models\bin\Debug\netcoreapp3.1\BookMyShow.Models.deps.json
+C:\Users\user\Documents\GitHub\BookMyShow\BookMyShow.Models\bin\Debug\netcoreapp3.1\BookMyShow.Models.dll
+C:\Users\user\Documents\GitHub\BookMyShow\BookMyShow.Models\bin\Debug\netcoreapp3.1\BookMyShow.Models.pdb
+C:\Users\user\Documents\GitHub\BookMyShow\BookMyShow.Models\obj\Debug\netcoreapp3.1\BookMyShow.Models.dll
+C:\Users\user\Documents\GitHub\BookMyShow\BookMyShow.Models\obj\Debug\netcoreapp3.1\BookMyShow.Models.pdb

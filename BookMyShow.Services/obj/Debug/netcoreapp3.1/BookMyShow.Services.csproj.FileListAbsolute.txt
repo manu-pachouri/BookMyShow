@@ -1,0 +1,12 @@
+C:\Users\user\Documents\GitHub\BookMyShow\BookMyShow.Services\obj\Debug\netcoreapp3.1\BookMyShow.Services.csprojAssemblyReference.cache
+C:\Users\user\Documents\GitHub\BookMyShow\BookMyShow.Services\obj\Debug\netcoreapp3.1\BookMyShow.Services.AssemblyInfoInputs.cache
+C:\Users\user\Documents\GitHub\BookMyShow\BookMyShow.Services\obj\Debug\netcoreapp3.1\BookMyShow.Services.AssemblyInfo.cs
+C:\Users\user\Documents\GitHub\BookMyShow\BookMyShow.Services\obj\Debug\netcoreapp3.1\BookMyShow.Services.csproj.CoreCompileInputs.cache
+C:\Users\user\Documents\GitHub\BookMyShow\BookMyShow.Services\bin\Debug\netcoreapp3.1\BookMyShow.Services.deps.json
+C:\Users\user\Documents\GitHub\BookMyShow\BookMyShow.Services\bin\Debug\netcoreapp3.1\BookMyShow.Services.dll
+C:\Users\user\Documents\GitHub\BookMyShow\BookMyShow.Services\bin\Debug\netcoreapp3.1\BookMyShow.Services.pdb
+C:\Users\user\Documents\GitHub\BookMyShow\BookMyShow.Services\bin\Debug\netcoreapp3.1\BookMyShow.Models.dll
+C:\Users\user\Documents\GitHub\BookMyShow\BookMyShow.Services\bin\Debug\netcoreapp3.1\BookMyShow.Models.pdb
+C:\Users\user\Documents\GitHub\BookMyShow\BookMyShow.Services\obj\Debug\netcoreapp3.1\BookMyShow.Services.csproj.CopyComplete
+C:\Users\user\Documents\GitHub\BookMyShow\BookMyShow.Services\obj\Debug\netcoreapp3.1\BookMyShow.Services.dll
+C:\Users\user\Documents\GitHub\BookMyShow\BookMyShow.Services\obj\Debug\netcoreapp3.1\BookMyShow.Services.pdb
